@@ -8,7 +8,7 @@ import { IMensagem } from '../interfaces/IMensagem';
   providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:3000/mensagens';
+  private apiUrl = 'http://localhost:3000/mensagem';
 
   constructor(private http: HttpClient) {}
 

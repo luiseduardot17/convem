@@ -5,7 +5,7 @@ const port = 3000;
 
 app.use(cors());
 
-app.get('/mensagens', (req, res) => {
+app.get('/mensagem', (req, res) => {
   
   const objeto = [
     { id: 1,
@@ -19,5 +19,5 @@ app.get('/mensagens', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Servidor está rodando na porta ${port}`);
-  console.log(`API disponível em http://localhost:${port}/mensagens`);
+  console.log(`API disponível em http://localhost:${port}/mensagem`);
 });
