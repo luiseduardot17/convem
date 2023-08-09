@@ -1,0 +1,7 @@
+<div>
+    <h1>Você quer se juntar ao time da Convem?</h1>
+    <input id="resposta" #text placeholder="Sua resposta">
+    <button (click)="getMensagens(text.value)">Confirmar</button>
+    <article *ngFor="let mensagem of mensagens">{{ mensagem.mensagem }}</article>
+    <p class="error" *ngIf="erro">{{ erro }}</p>
+</div>
