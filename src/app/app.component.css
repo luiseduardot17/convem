@@ -4,6 +4,9 @@ main{
     display: flex;
     align-items: center;
     background-color: #dddcdc;
+    background-image: url(../assets/logo.png);
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 section{
