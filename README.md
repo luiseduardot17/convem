@@ -1,27 +1,34 @@
-# MyApp
+# 🚀 Desafio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
-## Development server
+## 📥 Como instalar e usar o projeto:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para instalar o projeto, com o Visual Studio Code, ou outro editor de sua preferência,
+abra o terminal e clone o projeto:
 
-## Code scaffolding
+```
+git clone https://github.com/luiseduardot17/convem.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Confirme se esta no diretório correto, utilizando o comando:
 
-## Build
+```
+cd convem
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+No terminal, instale as dependências do projeto (Para isso você precisa ter o Node.js instalado):
 
-## Running unit tests
+```
+npm install ou npm i
+```
+Antes de iniciar a aplicação você deve iniciar a API, com o comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+node server.js
+```
 
-## Running end-to-end tests
+Finalmente, execute o projeto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+ng serve ou ng serve --open para abrir no navegador automaticamente
+```
