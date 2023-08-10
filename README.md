@@ -43,3 +43,15 @@ Finalmente, no novo terminal execute o projeto:
 ```
 ng serve ou ng serve --open para abrir no navegador automaticamente em http://localhost:4200/
 ```
+
+#
+
+## 🖼️ Telas
+
+Ao digitar "sim" é feita a requisição a API retornando o resultado do objeto de mensagem:
+
+![Desktop Screenshot 2023 08 09 - 21 47 57 76](https://github.com/luiseduardot17/convem/assets/102761201/728e4cfb-d397-4472-a0b5-532b92893960)
+
+Digitar qualquer outra palavra, retorna um erro e a requisição não é feita:
+
+![Desktop Screenshot 2023 08 09 - 21 50 48 82](https://github.com/luiseduardot17/convem/assets/102761201/8b672b14-9fa7-4936-af04-481d59a5356c)
