@@ -14,12 +14,16 @@ export class HomeScreenComponent {
   constructor(private apiService: ApiService) {}
 
   enviarResposta() {
+    this.loading = true;
+
     this.apiService.sendResponse(this.respostaUsuario).subscribe(
       (mensagem) => {
         this.respostaServidor = mensagem.mensagem; // Armazena a resposta da api.
+        this.loading = false;
       },
       (error) => {
         console.error('Erro ao enviar resposta:', error);
+        this.loading = false;
       }
     );
   }
