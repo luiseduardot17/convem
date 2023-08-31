@@ -1,28 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiService } from '../service/api.service';
-import { IMensagem } from '../interfaces/IMensagem';
 
 @Component({
   selector: 'app-home-screen',
   templateUrl: './home-screen.component.html',
   styleUrls: ['./home-screen.component.css'],
 })
-export class HomeScreenComponent implements OnInit {
-  mensagens: IMensagem[] = [];
-  erro: string = '';
+export class HomeScreenComponent {
+  respostaUsuario: string = '';
+  respostaServidor: string | null = null; // Variável para armazenar a resposta do servidor.
+  loading: boolean = false;
 
   constructor(private apiService: ApiService) {}
-  ngOnInit() {}
 
-  getMensagens(text: string) {
-    this.apiService.validate(text).subscribe(
-      (mensagens) => {
-        this.mensagens = mensagens;
-        this.erro = '';
+  enviarResposta() {
+    this.apiService.sendResponse(this.respostaUsuario).subscribe(
+      (mensagem) => {
+        this.respostaServidor = mensagem.mensagem; // Armazena a resposta da api.
       },
       (error) => {
-        this.mensagens = [];
-        this.erro = error;
+        console.error('Erro ao enviar resposta:', error);
       }
     );
   }
