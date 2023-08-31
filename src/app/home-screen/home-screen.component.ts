@@ -8,7 +8,7 @@ import { ApiService } from '../service/api.service';
 })
 export class HomeScreenComponent {
   respostaUsuario: string = '';
-  respostaServidor: string | null = null; // Variável para armazenar a resposta do servidor.
+  respostaServidor: string | null = null;
   loading: boolean = false;
 
   constructor(private apiService: ApiService) {}
@@ -18,7 +18,7 @@ export class HomeScreenComponent {
 
     this.apiService.sendResponse(this.respostaUsuario).subscribe(
       (mensagem) => {
-        this.respostaServidor = mensagem.mensagem; // Armazena a resposta da api.
+        this.respostaServidor = mensagem.mensagem;
         this.loading = false;
       },
       (error) => {
